@@ -1,52 +1,69 @@
-About this project
+🧠 Tic Tac Toe AI
+Video Demo: Coming soon (optional, insert YouTube link if available)
 
-The AI was implemented from scratch using the Minimax algorithm, a recursive backtracking approach that:
-
-Simulates all possible future moves
-
-Assumes the opponent plays optimally
-
-Always chooses the move that leads to a win or at worst, a draw
-
-In other words:
-
-If you're not perfect, you lose.
-
-If you are perfect, you draw.
-
-Winning is impossible.
+Description
+This project is an AI-powered implementation of the classic game Tic Tac Toe, developed in Python. The focus isn't just on making the game playable — it's about making the AI unbeatable.
 
 
-🛠️ My Role
+Here’s what that means for you:
 
-This project was part of the CS50 AI course by Harvard. I was responsible for implementing the full game logic, including:
+❌ You cannot win.
+🤝 If you play optimally, you'll force a tie.
+✅ If you slip up even once, you lose.
 
-Board state management
 
-Turn-based logic
+How It Works
+Initial State:
+The board starts as a 3x3 grid of empty spaces. X always plays first.
 
-Win/tie/loss detection
+Player Logic:
+The program alternates between X and O, determining the current player based on the number of remaining moves.
 
-The full Minimax algorithm with optimal move selection
+Valid Actions:
+The AI generates a list of all valid positions on the board.
 
-All logic was written in pure Python, without any third-party libraries.
+Minimax Algorithm:
 
-🧪 How to Play
+Recursively simulates every possible future move.
+
+Maximizes the score if it’s the AI’s turn, and minimizes it if it’s the opponent’s.
+
+Prunes decisions that lead to worse outcomes.
+
+Always selects the best move.
+
+Game Over:
+The game ends when a player wins or all cells are filled (draw). The result is printed clearly.
+
+My Role
+This project was developed as part of CS50’s Introduction to Artificial Intelligence with Python, specifically for the “Tic Tac Toe” unit.
+
+I implemented the full logic, including:
+
+Turn handling
+
+Game state management
+
+Win/draw detection
+
+Optimal move selection via Minimax
+
+Helper functions for simulation and scoring
+
+All code is written in pure Python with no external libraries.
+
+Results
+The AI never loses. Here’s what happens based on how you play:
+
+Your Strategy	Result
+Random/Imperfect	❌ You lose
+Perfect Play	🤝 Tie
+Try to Trick AI	❌ Still lose
+
+How to play.
 
 first, open up your terminal window.
 
 then, run 'python3 -r requirements.txt', and finally run 'python3 runner.py'
 
 that will open the GUI, then try to win.
-
-
-🔁 Outcome Possibilities
-
-Your Playstyle	Result
-
-Random	You lose
-
-Strategic	You lose
-
-Perfect	Draw
-Cheating	Still not winning 😎
