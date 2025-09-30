@@ -1,5 +1,5 @@
 🧠 Tic Tac Toe AI
-Video Demo: Coming soon (optional, insert YouTube link if available)
+Video Demo: Coming soon...
 
 Description
 This project is an AI-powered implementation of the classic game Tic Tac Toe, developed in Python. The focus isn't just on making the game playable — it's about making the AI unbeatable.
@@ -67,3 +67,4 @@ first, open up your terminal window.
 then, run 'python3 -r requirements.txt', and finally run 'python3 runner.py'
 
 that will open the GUI, then try to win.
+
