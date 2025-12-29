@@ -1,70 +1,70 @@
-🧠 Tic Tac Toe AI
-Video Demo: Coming soon...
+# Tic Tac Toe AI
 
-Description
-This project is an AI-powered implementation of the classic game Tic Tac Toe, developed in Python. The focus isn't just on making the game playable — it's about making the AI unbeatable.
+An unbeatable implementation of Tic Tac Toe developed in Python, featuring an AI opponent powered by the Minimax algorithm.
 
+## Overview
 
-Here’s what that means for you:
+This project demonstrates optimal game-playing AI through a classic Tic Tac Toe implementation. The AI is designed to never lose—at best, a perfectly-played human opponent will achieve a draw.
 
-❌ You cannot win.
-🤝 If you play optimally, you'll force a tie.
-✅ If you slip up even once, you lose.
+## Features
 
+- **Unbeatable AI**: Uses the Minimax algorithm to evaluate all possible game states and select optimal moves
+- **Turn Management**: Automatically alternates between human (X) and AI (O) players
+- **Game State Validation**: Checks for valid moves, win conditions, and draw states
+- **GUI Interface**: Interactive graphical interface for gameplay
+- **Pure Python**: No external dependencies beyond the GUI framework
 
-How It Works
-Initial State:
-The board starts as a 3x3 grid of empty spaces. X always plays first.
+## How the AI Works
 
-Player Logic:
-The program alternates between X and O, determining the current player based on the number of remaining moves.
+The AI uses the **Minimax algorithm** to determine optimal moves:
 
-Valid Actions:
-The AI generates a list of all valid positions on the board.
+1. **Game Tree Exploration**: Recursively simulates all possible future moves from the current board state
+2. **Score Evaluation**: Assigns scores to terminal states (win, loss, draw)
+3. **Minimax Logic**: Maximizes the AI's score while minimizing the opponent's
+4. **Move Selection**: Returns the move that produces the best outcome
 
-Minimax Algorithm:
+This exhaustive approach ensures the AI always makes the optimal play.
 
-Recursively simulates every possible future move.
+## Technical Implementation
 
-Maximizes the score if it’s the AI’s turn, and minimizes it if it’s the opponent’s.
+- **Turn Handling**: Determines current player based on remaining moves
+- **Move Validation**: Generates list of available positions
+- **State Management**: Tracks board configuration and game progress
+- **Win Detection**: Evaluates all winning combinations
+- **Helper Functions**: Utilities for board simulation and score calculation
 
-Prunes decisions that lead to worse outcomes.
+## Installation & Usage
 
-Always selects the best move.
+### Requirements
 
-Game Over:
-The game ends when a player wins or all cells are filled (draw). The result is printed clearly.
+- Python 3.x
 
-My Role
-This project was developed as part of CS50’s Introduction to Artificial Intelligence with Python, specifically for the “Tic Tac Toe” unit.
+### Setup
 
-I implemented the full logic, including:
+```bash
+pip install -r requirements.txt
+```
 
-Turn handling
+### Running the Game
 
-Game state management
+```bash
+python3 runner.py
+```
 
-Win/draw detection
+This launches the GUI interface where you can play against the AI. You control X (first move), and the AI plays as O.
 
-Optimal move selection via Minimax
+## Expected Outcomes
 
-Helper functions for simulation and scoring
+- **Perfect Play**: Results in a draw
+- **Suboptimal Play**: Results in a loss for the human player
 
-All code is written in pure Python with no external libraries.
+## Project Context
 
-Results
-The AI never loses. Here’s what happens based on how you play:
-
-Your Strategy	Result
-Random/Imperfect	❌ You lose
-Perfect Play	🤝 Tie
-Try to Trick AI	❌ Still lose
-
-How to play.
-
+Developed as part of CS50's Introduction to Artificial Intelligence with Python, specifically for the "Tic Tac Toe" unit. All code is written in pure Python.
 first, open up your terminal window.
 
-then, run 'python3 -r requirements.txt', and finally run 'python3 runner.py'
+then, run 'pip install -r requirements.txt', and finally run 'python3 runner.py'
 
 that will open the GUI, then try to win.
+
 
